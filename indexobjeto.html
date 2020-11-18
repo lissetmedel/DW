@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>OBJETOS</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>JavaScript Orientado a Objetos</h1>
+	<p>En JavaScript hay distintos tipos de datos, algunos de ellos (los primitivos) que solo pueden almacenar un valor, o los arreglos que en realidad son colecciones de datos. Así como los arreglos en JS hay otra estructura que nos facilita la creación de colecciones de datos: <b>los objetos</b></p>
+
+	<p>Los objetos en JS tienen la característica de que podemos formar entidades complejas con valores almacenados en una estructura <b>llave:valor</b></p>
+
+	<p>Además los objetos se encuentran casi en todos los aspectos del lenguaje, incluidos <b>DOM y BOM</b></p>
+
+	<p>Para crear un objeto se puede realizar de dos formas distintas, la forma literal y con un constructor</p>
+
+	<div class="codigo">
+		<h5><i>let</i> usuario <b>= new</b> <i>Object</i>(); <span>//Constructor</span></h5>
+		<h5><i>let</i> usuario <b>=</b> {}; <span>//Literal</span></h5>
+	</div>
+
+	<p>Dentro de la estructura de las llaves se colocará una lista opcional de propiedades, estas son almacenadas en una estructura llave- valor donde la cadena de la llave (que tmabién es denominada propiedad) y el valor pueden ser cualquier cosa.</p>
+	<p>En esta estructura el nombre de la propiedad o la llave se coloca antes de un par de puntos <b>:</b> y posteriormente se colocará el valor de la propiedad.</p>
+	<p>Una vez que se crea el objeto con sus atributos, podemos acceder a sus datos mediante la notación de punto (cualquier otro lenguaje) colocando <b>objeto:atributo</b>. Es importante conocer que cuando colocamos un atributo que tenga más de una palabra separada por espacios lo tendremos que colocar entre comillas dobles indicándole que es solo uno, es por esto que además de la notación de punto, podemos acceder a los atributos con notación de corchetes.</p>
+
+	<div class="codigo">
+		<h5><i>let</i> usuario <b>=</b>{</h5>
+		<h5>nombre:<u>"Lisset"</u>,</h5>
+		<h5>apellidp:<u>"Medel"</u>,</h5>
+		<h5><u>"apellido materno"</u>:<u>"San Elías"</u>,</h5>
+		<h5>}</h5>
+	</div>
+
+	<p>Además podemos accesar a las propiedades de un objeto de distintas formas, puede ser a través de la notación de <b>punto</b> (que es la más conocida) o la notación de <b>corchete</b> (que es obligatoria para las propiedades con dos palabras en su nombre).</p>
+
+
+	<div class="codigo">
+		<h5>(<u>"Mi nombre es: "</u><b>+</b>usuario<b>.</b>nombre);</h5>
+		<h5><i>console</i><b>.</b><i>log</i>(usuario[<u>"apellido materno"</u>]);</h5>
+	</div>
+</body>
+<script type="text/javascript">
+		//let usuario = new Object(); //Constructor
+		let usuario = {}; //Literal
+		usuario={
+					nombre:"Lisset",
+					apellido:"Medel",
+					"apellido materno":"San Elías",
+				}
+		console.log("Mi nombre es: " +usuario.nombre);
+		console.log(usuario["apellido materno"]);
+	</script>
+</html>
+
+
+
